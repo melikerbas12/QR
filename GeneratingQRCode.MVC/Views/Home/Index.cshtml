@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "QR Code Generator";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" action="/Home/GenerateQRCodeAndConvertToPDF">
+    <div>
+        <label for="jsonData">JSON Data:</label>
+        <textarea name="jsonData" id="jsonData" rows="5"></textarea>
+    </div>
+    <div>
+        <button type="submit">Generate QR Code and Download PDF</button>
+    </div>
+</form>

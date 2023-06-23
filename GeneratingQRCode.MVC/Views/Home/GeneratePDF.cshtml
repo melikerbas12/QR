@@ -1,0 +1,11 @@
+@model GeneratingQRCode.Models.PDFModel
+@{
+    ViewData["Title"] = "Generate pdf";
+}
+<form asp-action="GeneratePDF">
+    <div class="row mt-2">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <button type="submit" class="btn btn-primary" value="Create Document" >GeneratePDF</button>
+        </div>
+    </div>
+</form>
