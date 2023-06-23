@@ -4,7 +4,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<form method="post" action="/Home/GenerateQRCodeAndConvertToPDF">
+<form asp-action="GenerateQRCodeAndConvertToPDF">
     <div>
         <label for="jsonData">JSON Data:</label>
         <textarea name="jsonData" id="jsonData" rows="5"></textarea>

@@ -1,0 +1,32 @@
+@model GeneratingQRCode.Models.QRCodeModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>QR Code Generator</h1>
+
+@if (!string.IsNullOrEmpty(Model.QRImageURL))
+{
+    <h2>QR Code Image:</h2>
+    <img src="@Model.QRImageURL" alt="QR Code" />
+}
+
+<h2>Generate QR Code:</h2>
+
+<form asp-action="GenerateQRCode" method="post">
+    <div class="form-group">
+        <label asp-for="QRCodeData">QR Code Data:</label>
+        <input type="text" class="form-control" asp-for="QRCodeData" />
+    </div>
+    <button type="submit" class="btn btn-primary">Generate</button>
+</form>
+
+<h2>Generate PDF:</h2>
+
+<form asp-action="GeneratePDF" method="post">
+    <div class="form-group">
+        <label asp-for="QRImageURL">QR Code Image URL:</label>
+        <input type="text" class="form-control" asp-for="QRImageURL" />
+    </div>
+    <button type="submit" class="btn btn-primary">Generate PDF</button>
+</form>
